@@ -9,7 +9,13 @@ class Mission
 		"ca_modules_silvie",
 		"ca_modules_animals",
 		"CA_Modules_Alice",
-		"cacharacters_e"
+		"cacharacters_e",
+		"CAAir_E_AH6J",
+		"CAAir",
+		"CAAir2_F35B",
+		"acex_usnavy_veh_ah1",
+		"caair_e",
+		"CAAir2_UH1Y"
 	};
 	addOnsAuto[]=
 	{
@@ -19,6 +25,12 @@ class Mission
 		"ca_modules_silvie",
 		"ca_modules_animals",
 		"CA_Modules_Alice",
+		"CAAir_E_AH6J",
+		"CAAir",
+		"CAAir2_F35B",
+		"acex_usnavy_veh_ah1",
+		"caair_e",
+		"CAAir2_UH1Y",
 		"chernarus"
 	};
 	randomSeed=1261270;
@@ -316,6 +328,105 @@ class Mission
 					skill=0.60000002;
 				};
 			};
+		};
+	};
+	class Vehicles
+	{
+		items=7;
+		class Item0
+		{
+			presence=0.51742899;
+			position[]={4750.2368,339,10156.653};
+			azimut=243.70599;
+			id=16;
+			side="EMPTY";
+			vehicle="AH6J_EP1";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_empty_lb";
+		};
+		class Item1
+		{
+			presence=0.20743786;
+			position[]={4880.4238,339,9669.8838};
+			azimut=328.06799;
+			id=17;
+			side="EMPTY";
+			vehicle="AV8B2";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_empty_har";
+		};
+		class Item2
+		{
+			presence=0.19687021;
+			presenceCondition=" isnil ""gg_empty_har"" and isnil ""gg_empty_her""";
+			position[]={4862.064,339,9705.0723};
+			azimut=328.06799;
+			id=18;
+			side="EMPTY";
+			vehicle="AV8B";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_empty_av8";
+		};
+		class Item3
+		{
+			presence=0.29902589;
+			presenceCondition=" isnil ""gg_empty_har"" and isnil ""gg_empty_her"" and isnil ""gg_empty_av8""";
+			position[]={4853.1392,339,9718.4727};
+			azimut=328.06799;
+			id=19;
+			side="EMPTY";
+			vehicle="F35B";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_emp_lig";
+		};
+		class Item4
+		{
+			presence=0.48572508;
+			presenceCondition="isnil ""gg_empty_lb""";
+			position[]={4764.5645,339,10139.198};
+			azimut=238.464;
+			id=20;
+			side="EMPTY";
+			vehicle="ACE_AH1W_TOW_W";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_emt_ah1";
+		};
+		class Item5
+		{
+			presence=0.21448307;
+			presenceCondition=" isnil ""gg_empty_har""";
+			position[]={4872.5957,339,9685.9717};
+			azimut=328.06799;
+			id=21;
+			side="EMPTY";
+			vehicle="C130J_US_EP1";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_empty_her";
+		};
+		class Item6
+		{
+			presenceCondition="isnil ""gg_empty_lb"" and isnil ""gg_empty_ah1""";
+			position[]={4776.6475,339,10116.311};
+			azimut=238.464;
+			id=22;
+			side="EMPTY";
+			vehicle="UH1Y";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+			text="gg_empty_uh1";
 		};
 	};
 	class Markers

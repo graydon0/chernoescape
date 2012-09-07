@@ -76,7 +76,7 @@ drn_arr_Escape_AmmoDepot_StaticWeaponClasses = ["DSHkM_Mini_TriPod", "AGS_Ins", 
 // An ammo depot have one parked and empty vehicle of the following possible types.
 drn_arr_Escape_AmmoDepot_ParkedVehicleClasses = ["T72_INS", "ZSU_INS", "2S6M_Tunguska", "T90"];
 //Graydon: 1 parked and empty aircraft.
-drn_arr_Escape_AmmoDepot_ParkedAircraftClasses = ["AH1Z", "Mi24_P", "Mi24_D", "Mi17_Ins", "Ka52", "AV8B", "T72_INS", "ZSU_INS", "2S6M_Tunguska", "T90"];
+drn_arr_Escape_AmmoDepot_ParkedAircraftClasses = ["AH1Z", "T72_INS", "ZSU_INS", "2S6M_Tunguska", "T90","BMP2_INS", "BMP3", "BTR90"];
 // The following arrays define weapons and ammo contained at the ammo depots
 // Index 0: Weapon classname.
 // Index 1: Weapon's probability of presence (in percent, 0-100).
@@ -88,16 +88,16 @@ drn_arr_Escape_AmmoDepot_ParkedAircraftClasses = ["AH1Z", "Mi24_P", "Mi24_D", "M
 // Weapons and ammo in the basic weapons box
 drn_arr_AmmoDepotBasicWeapons = [];
 // Insurgent weapons
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M16A4_ACG_GL", 100, 8, 12, ["30Rnd_556x45_Stanag"], 14]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M4A1_AIM_CAMO", 100, 8, 12, ["30Rnd_556x45_Stanag"], 12]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["m107", 100, 8, 12, ["10Rnd_127x99_M107"], 12]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M249", 100, 2, 4, ["200Rnd_556x45_M249"], 15]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["DMR", 35, 2, 4, ["20Rnd_762x51_DMR"], 20]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["MK_48", 25, 3, 6, ["100Rnd_762x51_M240"], 12]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M24", 30, 2, 3, ["5Rnd_762x51_M24"], 15]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M240", 85, 8, 12, ["100Rnd_762x51_M240"], 10]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["SCAR_L_STD_EGLM_TWS", 85, 8, 12, ["30Rnd_556x45_StanagSD"], 10]];
-drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["m107_TWS_EP1", 85, 8, 12, ["10Rnd_127x99_m107"], 10]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M16A4_ACG_GL", 90, 8, 12, ["30Rnd_556x45_Stanag"], 14]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M4A1_AIM_CAMO", 75, 1, 4, ["30Rnd_556x45_Stanag"], 12]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["m107", 10, 8, 12, ["10Rnd_127x99_M107"], 12]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M249", 50, 2, 3, ["200Rnd_556x45_M249"], 15]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["DMR", 10, 1, 3, ["20Rnd_762x51_DMR"], 20]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["MK_48", 10, 3, 6, ["100Rnd_762x51_M240"], 12]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M24", 10, 2, 3, ["5Rnd_762x51_M24"], 15]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["M240", 5, 8, 12, ["100Rnd_762x51_M240"], 10]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["SCAR_L_STD_EGLM_TWS", 5, 8, 12, ["30Rnd_556x45_StanagSD"], 10]];
+drn_arr_AmmoDepotBasicWeapons set [count drn_arr_AmmoDepotBasicWeapons, ["m107_TWS_EP1", 5, 8, 12, ["10Rnd_127x99_m107"], 10]];
 
 
 // Russian weapons
