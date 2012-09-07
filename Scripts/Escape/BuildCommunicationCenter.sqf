@@ -234,7 +234,7 @@ _dir = 90;
 // Flag
 _pos = [0, 10];
 _dir = 0;
-["FlagCarrierINS", _pos, _dir, _centerPos, _rotateDir] call _fnc_CreateObject;
+["FlagCarrierUS", _pos, _dir, _centerPos, _rotateDir] call _fnc_CreateObject;
 
 if (count _staticWeaponClasses > 0) then {
     // Statics

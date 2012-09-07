@@ -121,7 +121,7 @@ _object setDir _dir;
 _dir = 90 + _rotateDir;
 
 _pos = [(_centerPos select 0) + 7, (_centerPos select 1) + 5, 0];
-_object = "FlagCarrierINS" createVehicle _pos;
+_object = "FlagCarrierUS" createVehicle _pos;
 _object setPos ([_centerPos, _pos, _rotateDir] call drn_fnc_CL_RotatePosition);
 _object setDir _dir;
 
