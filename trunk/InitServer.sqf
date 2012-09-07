@@ -207,7 +207,7 @@ if (true) then {
         waitUntil {scriptDone _scriptHandle};
         
         _marker = createMarker ["drn_CommunicationCenterMapMarker" + str _instanceNo, _pos];
-        _marker setMarkerType "Faction_INS";
+        _marker setMarkerType "Faction_US";
         
         _marker = createMarkerLocal ["drn_CommunicationCenterPatrolMarker" + str _instanceNo, _pos];
         _marker setMarkerShapeLocal "ELLIPSE";
@@ -218,7 +218,7 @@ if (true) then {
     } foreach _chosenComCenIndexes;
     
     if (_comCenGuardsExist) then {
-        _scriptHandle = [_playerGroup, "drn_CommunicationCenterPatrolMarker", east, "INS", 4, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
+        _scriptHandle = [_playerGroup, "drn_CommunicationCenterPatrolMarker", east, "USMC", 4, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
         waitUntil {scriptDone _scriptHandle};
     };
     
@@ -273,7 +273,7 @@ if (_useAmmoDepots) then {
             };
         };
         
-        _scriptHandle = [_playerGroup, "drn_AmmoDepotPatrolMarker", east, "INS", 3, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance, _debugAmmoDepots] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
+        _scriptHandle = [_playerGroup, "drn_AmmoDepotPatrolMarker", east, "USMC", 3, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance, _debugAmmoDepots] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
         waitUntil {scriptDone _scriptHandle};
     };
 };

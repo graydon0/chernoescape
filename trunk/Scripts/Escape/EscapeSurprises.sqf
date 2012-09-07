@@ -160,8 +160,8 @@ while {true} do {
                     
                     _group = createGroup east;
 
-                    "Ins_Soldier_Pilot" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
-                    "Ins_Soldier_Pilot" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
+                    "USMC_Soldier_Pilot" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
+                    "USMC_Soldier_Pilot" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
 
                     ((units _group) select 0) assignAsDriver _chopper;
                     ((units _group) select 0) moveInDriver _chopper;

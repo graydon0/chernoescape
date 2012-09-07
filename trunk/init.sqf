@@ -15,8 +15,8 @@ _showIntro = false;
 
 // Debug Variables
 
-_showPlayerMapAndCompass = false;
-_playerIsImmortal = false; // Only works for unit p1
+_showPlayerMapAndCompass = true;
+_playerIsImmortal = true; // Only works for unit p1
 
 // Initialization
 
@@ -332,7 +332,7 @@ if (!isNull player) then {
                 sleep 2.75;
                 
                 0 cutText ["", "BLACK FADED"];
-                ["Is have some Fun", str (date select 2) + "/" + str (date select 1) + "/" + str (date select 0) + " " + str (date select 3) + ":00"] spawn BIS_fnc_infoText;
+                ["US-Occupied Chernarus", str (date select 2) + "/" + str (date select 1) + "/" + str (date select 0) + " " + str (date select 3) + ":00"] spawn BIS_fnc_infoText;
             };
         };
 
@@ -367,7 +367,7 @@ if (!isNull player) then {
                 // Only show this on non ported missions
                 if (worldName == "Chernarus") then {
                     sleep 20;
-                    ["I don't want to wait, for our lives to be over", true] call drn_fnc_CL_ShowTitleTextLocal;
+                    ["^-^ Thanks for playing. Hope you are using ACE2 and playing on Expert!", true] call drn_fnc_CL_ShowTitleTextLocal;
                 };
             };
         };

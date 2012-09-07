@@ -57,7 +57,7 @@ while {!(isNil _vehicleVarName)} do {
 	_vehicleVarName = _vehicleVarNameBase + str _vehicleVarNameNo;
 };
 
-_chopper = "Mi17_Ins" createVehicle _homePos;
+_chopper = "UH1Y" createVehicle _homePos;
 _chopper lock false;
 _chopper setVehicleVarName _vehicleVarName;
 _chopper call compile format ["%1=_this;", _vehicleVarName];
