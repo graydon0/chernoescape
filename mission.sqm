@@ -10,15 +10,7 @@ class Mission
 		"ca_modules_animals",
 		"CA_Modules_Alice",
 		"cacharacters_e",
-		"CAAir_E_AH6J",
-		"CAAir",
-		"CAAir2_F35B",
-		"acex_usnavy_veh_ah1",
-		"caair_e",
-		"CAAir2_UH1Y",
-		"CAAir_E_UH60M",
-		"acex_ru_c_men",
-		"acex_usnavy_men_usmc"
+
 	};
 	addOnsAuto[]=
 	{
@@ -28,14 +20,6 @@ class Mission
 		"ca_modules_animals",
 		"CA_Modules_Alice",
 		"cacharacters2",
-		"acex_ru_c_men",
-		"CAAir_E_AH6J",
-		"CAAir",
-		"CAAir2_F35B",
-		"acex_usnavy_veh_ah1",
-		"caair_e",
-		"CAAir2_UH1Y",
-		"CAAir_E_UH60M",
 		"chernarus"
 	};
 	randomSeed=1261270;
@@ -49,8 +33,8 @@ class Mission
 		forecastWeather=0.3805666;
 		forecastFog=0.1205344;
 		year=2012;
-		month=09;
-		day=07;
+		month=9;
+		day=7;
 		hour=8;
 		minute=0;
 	};
@@ -230,9 +214,9 @@ class Mission
 				class Item0
 				{
 					position[]={6584.0532,327.4364,14140.731};
-					id=19;
+					id=9;
 					side="EAST";
-					vehicle="RUS_Soldier_Marksman";
+					vehicle="RU_Soldier_Sniper";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.46666664;
@@ -244,9 +228,9 @@ class Mission
 					presenceCondition="";
 					position[]={6581.6372,327.41394,14140.912};
 					azimut=328.06799;
-					id=23;
+					id=13;
 					side="EAST";
-					vehicle="ACE_RUS_Soldier_Medic";
+					vehicle="RU_Soldier_Marksman";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -256,9 +240,9 @@ class Mission
 				class Item2
 				{
 					position[]={6582.9722,327.4274,14140.752};
-					id=18;
+					id=8;
 					side="EAST";
-					vehicle="RUS_Soldier_GL";
+					vehicle="RU_Soldier_GL";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.46666664;
@@ -268,9 +252,9 @@ class Mission
 				class Item3
 				{
 					position[]={6579.7808,327.39111,14141.468};
-					id=21;
+					id=11;
 					side="EAST";
-					vehicle="RUS_Soldier1";
+					vehicle="RU_Soldier_Officer";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.33333331;
@@ -282,9 +266,9 @@ class Mission
 					presenceCondition="";
 					position[]={6581.4746,327.42569,14140.221};
 					azimut=328.06799;
-					id=24;
+					id=14;
 					side="EAST";
-					vehicle="RUS_Soldier_GL";
+					vehicle="RU_Soldier_TL";
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -294,9 +278,9 @@ class Mission
 				class Item5
 				{
 					position[]={6580.5386,327.4191,14140.241};
-					id=20;
+					id=10;
 					side="EAST";
-					vehicle="RUS_Soldier3";
+					vehicle="RU_Soldier_MG";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.46666664;
@@ -306,9 +290,9 @@ class Mission
 				class Item6
 				{
 					position[]={6582.8027,327.43988,14139.954};
-					id=22;
+					id=12;
 					side="EAST";
-					vehicle="RUS_Soldier2";
+					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.33333331;
@@ -319,9 +303,9 @@ class Mission
 				{
 					presence=0;
 					position[]={6581.2168,327.34872,14144.48};
-					id=25;
+					id=15;
 					side="WEST";
-					vehicle="CZ_Special_Forces_Scout_DES_EP1";
+					vehicle="USMC_Soldier";
 					leader=1;
 					rank="COLONEL";
 					skill=0.60000002;
@@ -329,9 +313,9 @@ class Mission
 				class Item8
 				{
 					position[]={6581.0737,327.38864,14142.111};
-					id=26;
+					id=16;
 					side="EAST";
-					vehicle="RUS_Soldier_TL";
+					vehicle="RU_Soldier_TL";
 					player="PLAYER COMMANDER";
 					rank="MAJOR";
 					skill=0.60000002;
@@ -339,139 +323,6 @@ class Mission
 					init="this setCaptive true;this setVariable [""drn_var_initializing"", true];this addeventhandler [""killed"",{ if ((_this select 1) in (call drn_fnc_Escape_GetPlayers) && (_this select 1) != (_this select 0)) then {[(_this select 1), -9] call drn_fnc_CL_AddScore;}; }];onMapSingleClick ""player setPos _pos;"";";
 				};
 			};
-		};
-	};
-	class Vehicles
-	{
-		items=10;
-		class Item0
-		{
-			presence=0.51742899;
-			position[]={4750.2368,339,10156.653};
-			azimut=243.70599;
-			id=8;
-			side="EMPTY";
-			vehicle="AH6J_EP1";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_empty_lb";
-		};
-		class Item1
-		{
-			presence=0.16164368;
-			position[]={4880.4238,339,9669.8838};
-			azimut=328.06799;
-			id=9;
-			side="EMPTY";
-			vehicle="AV8B2";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_empty_har";
-		};
-		class Item2
-		{
-			presence=0.14755341;
-			presenceCondition=" isnil ""gg_empty_har"" and isnil ""gg_empty_her""";
-			position[]={4862.064,339,9705.0723};
-			azimut=328.06799;
-			id=10;
-			side="EMPTY";
-			vehicle="AV8B";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_empty_av8";
-		};
-		class Item3
-		{
-			presence=0.22152813;
-			presenceCondition=" isnil ""gg_empty_har"" and isnil ""gg_empty_her"" and isnil ""gg_empty_av8""";
-			position[]={4853.1392,339,9718.4727};
-			azimut=328.06799;
-			id=11;
-			side="EMPTY";
-			vehicle="F35B";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_emp_lig";
-		};
-		class Item4
-		{
-			presence=0.48572508;
-			presenceCondition="isnil ""gg_empty_lb""";
-			position[]={4764.5645,339,10139.198};
-			azimut=238.464;
-			id=12;
-			side="EMPTY";
-			vehicle="ACE_AH1W_TOW_W";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_emt_ah1";
-		};
-		class Item5
-		{
-			presence=0.13698529;
-			presenceCondition=" isnil ""gg_empty_har""";
-			position[]={4872.5957,339,9685.9717};
-			azimut=328.06799;
-			id=13;
-			side="EMPTY";
-			vehicle="C130J_US_EP1";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_empty_her";
-		};
-		class Item6
-		{
-			presenceCondition="isnil ""gg_empty_lb"" and isnil ""gg_empty_ah1""";
-			position[]={4776.6475,339,10116.311};
-			azimut=238.464;
-			id=14;
-			side="EMPTY";
-			vehicle="UH1Y";
-			leader=1;
-			lock="UNLOCKED";
-			skill=0.60000002;
-			text="gg_empty_uh1";
-		};
-		class Item7
-		{
-			presence=0.26379985;
-			position[]={4769.3477,9,2544.2935};
-			azimut=211.74899;
-			id=15;
-			side="EMPTY";
-			vehicle="UH1Y";
-			skill=0.60000002;
-			text="gg_empty_uh1b";
-		};
-		class Item8
-		{
-			presence=0.22505119;
-			presenceCondition="isnil ""gg_empty_uh1b""";
-			position[]={4733.4082,8.9557343,2560.8198};
-			azimut=211.66901;
-			id=16;
-			side="EMPTY";
-			vehicle="MH60S";
-			skill=0.60000002;
-		};
-		class Item9
-		{
-			presence=0.24970959;
-			presenceCondition="";
-			position[]={12297.274,159,12642.436};
-			azimut=304.34399;
-			id=17;
-			side="EMPTY";
-			vehicle="UH60M_EP1";
-			skill=0.60000002;
-			text="gg_empty_uh6k";
 		};
 	};
 	class Markers
