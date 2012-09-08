@@ -479,7 +479,7 @@ drn_fnc_Escape_BuildAmmoDepot = {
     };
     
     if (count _weapons > 0) then {
-        _box = "RUBasicWeaponsBox" createVehicle _middlePos;
+        _box = "USBasicWeapons_EP1" createVehicle _middlePos;
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         
@@ -520,7 +520,7 @@ drn_fnc_Escape_BuildAmmoDepot = {
     };
     
     if (count _weapons > 0) then {
-        _box = "RUSpecialWeaponsBox" createVehicle _middlePos;
+        _box = "USSpecialWeapons_EP1" createVehicle _middlePos;
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         
@@ -561,7 +561,7 @@ drn_fnc_Escape_BuildAmmoDepot = {
     };
     
     if (count _weapons > 0) then {
-        _box = "RUOrdnanceBox" createVehicle _middlePos;
+        _box = "USOrdnanceBox_EP1" createVehicle _middlePos;
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         
@@ -602,7 +602,7 @@ drn_fnc_Escape_BuildAmmoDepot = {
     };
     
     if (count _weapons > 0) then {
-        _box = "RUVehicleBox" createVehicle _middlePos;
+        _box = "USVehicleBox_EP1" createVehicle _middlePos;
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         
@@ -643,7 +643,7 @@ drn_fnc_Escape_BuildAmmoDepot = {
     };
     
     if (count _weapons > 0) then {
-        _box = "RULaunchersBox" createVehicle _middlePos;
+        _box = "USLaunchers_EP1" createVehicle _middlePos;
         clearWeaponCargoGlobal _box;
         clearMagazineCargoGlobal _box;
         
