@@ -24,7 +24,7 @@ class Mission
 	randomSeed=1261270;
 	class Intel
 	{
-		briefingName="co08 Escape Chernarus [1.8]";
+		briefingName="Escape Chernarus Russian Edition";
 		briefingDescription="Caught in enemy territory trying to escape!";
 		resistanceEast=1;
 		startWeather=0.2605564;
