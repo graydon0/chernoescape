@@ -218,7 +218,7 @@ if (true) then {
     } foreach _chosenComCenIndexes;
     
     if (_comCenGuardsExist) then {
-        _scriptHandle = [_playerGroup, "drn_CommunicationCenterPatrolMarker", east, "USMC", 4, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
+        _scriptHandle = [_playerGroup, "drn_CommunicationCenterPatrolMarker", west, "USMC", 4, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
         waitUntil {scriptDone _scriptHandle};
     };
     
@@ -273,7 +273,7 @@ if (_useAmmoDepots) then {
             };
         };
         
-        _scriptHandle = [_playerGroup, "drn_AmmoDepotPatrolMarker", east, "USMC", 3, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance, _debugAmmoDepots] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
+        _scriptHandle = [_playerGroup, "drn_AmmoDepotPatrolMarker", west, "USMC", 3, _minEnemies, _maxEnemies, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance, _debugAmmoDepots] execVM "Scripts\DRN\DynamicGuardedLocations\InitGuardedLocations.sqf";
         waitUntil {scriptDone _scriptHandle};
     };
 };
@@ -354,7 +354,7 @@ if (_useMotorizedSearchGroup) then {
             } foreach units _this;
         };
         
-        _scriptHandle = [(units _playerGroup) select 0, east, drn_arr_Escape_InfantryTypes, _minEnemiesPerGroup, _maxEnemiesPerGroup, 5000, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance + 250, _fnc_OnSpawnGroup, _debugVillagePatrols] execVM "Scripts\DRN\VillagePatrols\InitVillagePatrols.sqf";
+        _scriptHandle = [(units _playerGroup) select 0, west, drn_arr_Escape_InfantryTypes, _minEnemiesPerGroup, _maxEnemiesPerGroup, 5000, _enemyMinSkill, _enemyMaxSkill, _enemySpawnDistance + 250, _fnc_OnSpawnGroup, _debugVillagePatrols] execVM "Scripts\DRN\VillagePatrols\InitVillagePatrols.sqf";
         waitUntil {scriptDone _scriptHandle};
     };
     
@@ -425,7 +425,7 @@ if (_useMotorizedSearchGroup) then {
         _radius = (_enemySpawnDistance + 500) / 1000;
         _infantryGroupsCount = round (_groupsPerSqkm * _radius * _radius * 3.141592);
         
-        [_playerGroup, east, drn_arr_Escape_InfantryTypes, _infantryGroupsCount, _enemySpawnDistance + 200, _enemySpawnDistance + 500, _minEnemiesPerGroup, _maxEnemiesPerGroup, _enemyMinSkill, _enemyMaxSkill, 750, _fnc_OnSpawnAmbientInfantryUnit, _fnc_OnSpawnAmbientInfantryGroup, _debugAmbientInfantry] execVM "Scripts\DRN\AmbientInfantry\AmbientInfantry.sqf";
+        [_playerGroup, west, drn_arr_Escape_InfantryTypes, _infantryGroupsCount, _enemySpawnDistance + 200, _enemySpawnDistance + 500, _minEnemiesPerGroup, _maxEnemiesPerGroup, _enemyMinSkill, _enemyMaxSkill, 750, _fnc_OnSpawnAmbientInfantryUnit, _fnc_OnSpawnAmbientInfantryGroup, _debugAmbientInfantry] execVM "Scripts\DRN\AmbientInfantry\AmbientInfantry.sqf";
         sleep 0.25;
     };
     
@@ -509,7 +509,7 @@ if (_useMotorizedSearchGroup) then {
         
         _radius = _enemySpawnDistance + 500;
         _vehiclesCount = round (_vehiclesPerSqkm * (_radius / 1000) * (_radius / 1000) * 3.141592);
-        [_playerGroup, east, drn_arr_Escape_MilitaryTraffic_EnemyVehicleClasses, _vehiclesCount, _enemySpawnDistance, _radius, _enemyMinSkill, _enemyMaxSkill, drn_fnc_Escape_TrafficSearch, _debugMilitaryTraffic] execVM "Scripts\DRN\MilitaryTraffic\MilitaryTraffic.sqf";
+        [_playerGroup, west, drn_arr_Escape_MilitaryTraffic_EnemyVehicleClasses, _vehiclesCount, _enemySpawnDistance, _radius, _enemyMinSkill, _enemyMaxSkill, drn_fnc_Escape_TrafficSearch, _debugMilitaryTraffic] execVM "Scripts\DRN\MilitaryTraffic\MilitaryTraffic.sqf";
         sleep 0.25;
     };
     
@@ -539,7 +539,7 @@ if (_useMotorizedSearchGroup) then {
             _roadBlockCount = 1;
         };
         
-        [_playerGroup, east, drn_arr_Escape_InfantryTypes, drn_arr_Escape_RoadBlock_MannedVehicleTypes, _roadBlockCount, _enemySpawnDistance, _enemySpawnDistance + 500, 500, 300, _fnc_OnSpawnInfantryGroup, _fnc_OnSpawnMannedVehicle, _debugRoadBlocks] execVM "Scripts\DRN\RoadBlocks\RoadBlocks.sqf";
+        [_playerGroup, west, drn_arr_Escape_InfantryTypes, drn_arr_Escape_RoadBlock_MannedVehicleTypes, _roadBlockCount, _enemySpawnDistance, _enemySpawnDistance + 500, 500, 300, _fnc_OnSpawnInfantryGroup, _fnc_OnSpawnMannedVehicle, _debugRoadBlocks] execVM "Scripts\DRN\RoadBlocks\RoadBlocks.sqf";
         sleep 0.25;
     };
 };
@@ -547,7 +547,7 @@ if (_useMotorizedSearchGroup) then {
 // Create search chopper
 if (_useSearchChopper) then {
     private ["_scriptHandle"];
-    _scriptHandle = [getMarkerPos "drn_searchChopperStartPosMarker", east, drn_searchAreaMarkerName, _searchChopperSearchTimeMin, _searchChopperRefuelTimeMin, _enemyMinSkill, _enemyMaxSkill, [], drn_var_Escape_debugSearchChopper] execVM "Scripts\Escape\CreateSearchChopper.sqf";
+    _scriptHandle = [getMarkerPos "drn_searchChopperStartPosMarker", west, drn_searchAreaMarkerName, _searchChopperSearchTimeMin, _searchChopperRefuelTimeMin, _enemyMinSkill, _enemyMaxSkill, [], drn_var_Escape_debugSearchChopper] execVM "Scripts\Escape\CreateSearchChopper.sqf";
     waitUntil {scriptDone _scriptHandle};
 };
 
@@ -566,7 +566,7 @@ if (_useSearchChopper) then {
     _fenceRotateDir = _this select 7;
     
     // Spawn guard
-    _guardGroup = createGroup east;
+    _guardGroup = createGroup west;
     _guardPos = [_startPos, [(_startPos select 0) - 4, (_startPos select 1) + 4, 0], _fenceRotateDir] call drn_fnc_CL_RotatePosition;
     (drn_arr_Escape_StartPositionGuardTypes select floor (random count drn_arr_Escape_StartPositionGuardTypes)) createUnit [_guardPos, _guardGroup, "", (0.5), "CAPTAIN"];
     _guard = units _guardGroup select 0;
@@ -614,7 +614,7 @@ if (_useSearchChopper) then {
         };
         
         if (_createNewGroup) then {
-            _guardGroup = createGroup east;
+            _guardGroup = createGroup west;
             _guardGroups set [count _guardGroups, _guardGroup];
             _createNewGroup = false;
         };

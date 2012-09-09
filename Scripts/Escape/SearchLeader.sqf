@@ -88,7 +88,7 @@ while {1 == 1} do {
 				_leader = _x;
 			} foreach units _x;
 
-            if (alive _leader && side _x == east) then {
+            if (alive _leader && side _x == west) then {
 				_nearestEnemy = _leader findNearestEnemy position _leader;
 				
                 if (!isNull _nearestEnemy) then {
@@ -219,7 +219,7 @@ while {1 == 1} do {
                 // Reveal players for enemy units in the vicinity (if its not dark)
                 if ((date select 3) > 6 && (date select 3) < 18) then {
                     {
-                        if (side _x == east && count units _x > 0) then {
+                        if (side _x == west && count units _x > 0) then {
                             if (((units _x) select 0) distance _detectedUnit < (350 * (1 - fog))) then {
                                 _x reveal _detectedUnit;
                             };

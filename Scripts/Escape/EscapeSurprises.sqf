@@ -115,7 +115,7 @@ while {true} do {
                     
                     _noOfDropUnits = _surpriseArgs select 0;
                     
-                    _dropGroup = createGroup east;
+                    _dropGroup = createGroup west;
                     _dropUnits = [];
                     
                     for [{_i = 0}, {_i < _noOfDropUnits}, {_i = _i + 1}] do {
@@ -213,7 +213,7 @@ while {true} do {
                         sleep 1;
                     };
                     
-                    [call drn_fnc_Escape_GetPlayerGroup, getPos _spawnSegment, east, drn_arr_Escape_EnemyCivilianCarTypes, drn_arr_Escape_InfantryTypes, _enemyFrequency, drn_var_Escape_debugCivilEnemy] execVM "Scripts\Escape\CreateCivilEnemy.sqf";
+                    [call drn_fnc_Escape_GetPlayerGroup, getPos _spawnSegment, west, drn_arr_Escape_EnemyCivilianCarTypes, drn_arr_Escape_InfantryTypes, _enemyFrequency, drn_var_Escape_debugCivilEnemy] execVM "Scripts\Escape\CreateCivilEnemy.sqf";
                     
                     _surpriseArgs = [_minEnemySkill, _maxEnemySkill];
                     _timeInSek = 15 * 60 + random (45 * 60);
