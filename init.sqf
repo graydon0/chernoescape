@@ -15,8 +15,8 @@ _showIntro = false;
 
 // Debug Variables
 
-_showPlayerMapAndCompass = true;
-_playerIsImmortal = true; // Only works for unit p1
+_showPlayerMapAndCompass = false;
+_playerIsImmortal = false; // Only works for unit p1
 
 // Initialization
 
@@ -367,7 +367,7 @@ if (!isNull player) then {
                 // Only show this on non ported missions
                 if (worldName == "Chernarus") then {
                     sleep 20;
-                    ["^-^ Thanks for playing. Hope you are using ACE2 and playing on Expert!", true] call drn_fnc_CL_ShowTitleTextLocal;
+                    ["^-^ Thanks for playing. Please play on Veteran or harder (Same enemy difficulty, but you can't see yourself on map.", true] call drn_fnc_CL_ShowTitleTextLocal;
                 };
             };
         };
