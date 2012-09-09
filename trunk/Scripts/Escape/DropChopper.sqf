@@ -39,7 +39,7 @@ _chopper setVariable ["missionCompleted", false];
 		player sideChat "Drop chopper dropping cargo...";
 	};
 
-    _dropGroup = createGroup east;
+    _dropGroup = createGroup west;
     _i = 0;
     
     {

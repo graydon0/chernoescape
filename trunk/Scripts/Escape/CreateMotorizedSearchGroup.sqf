@@ -16,7 +16,7 @@ _vehicleClass = drn_arr_Escape_MotorizedSearchGroup_vehicleClasses select _index
 
 _vehicleMaxCargo = drn_arr_Escape_MotorizedSearchGroup_vehicleClassesMaxCargo select _index;
 
-_result = [_spawnPos, 0, _vehicleClass, east] call BIS_fnc_spawnVehicle;
+_result = [_spawnPos, 0, _vehicleClass, west] call BIS_fnc_spawnVehicle;
 _vehicle = _result select 0;
 _crew = _result select 1;
 _group = _result select 2;

@@ -49,7 +49,7 @@ KRON_UPS_sharedist = 600;
 KRON_UPS_comradio = 2;
 
 //Sides that are enemies of resistance
-KRON_UPS_Res_enemy = [east];
+KRON_UPS_Res_enemy = [west];
 
 // Distance from destination for searching vehicles. (Search area is about 200m), 
 // If your destination point is further than KRON_UPS_searchVehicledist, AI will try to find a vehicle to go there.
@@ -181,7 +181,7 @@ KRON_UPS_ARTILLERY_GUER_FIRE = false; //set to true for doing resistance to fire
 		UPSMON = compile preprocessFile "scripts\UPSMON.sqf";	
 		UPSMON_surrended = compile preprocessFile "scripts\UPSMON\MON_surrended.sqf";	
 
-		// declaración de variables privadas
+		// declaraciï¿½n de variables privadas
 		private["_obj","_trg","_l","_pos"];
 
 		// global functions
