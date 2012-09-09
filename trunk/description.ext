@@ -6,7 +6,7 @@ class Header
   maxPlayers = 8;
 };
 
-onLoadMission = "ESCAPE CHERNARUS 1.8";
+onLoadMission = "Escape Chernarus Russian Edition";
 OnLoadMissionTime = FALSE;
 
 // description.ext settings for revive
