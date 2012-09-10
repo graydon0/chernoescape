@@ -1,7 +1,7 @@
 // Mission Header
 class Header
 {
-  gameType = Coop;
+  gameType = Team;
   minPlayers = 1;
   maxPlayers = 8;
 };
@@ -13,7 +13,7 @@ OnLoadMissionTime = FALSE;
 ///////////////////////////////////////////////////////////////////////////////////////////
 respawn = "BASE";
 respawndelay = 4;
-disabledAI = 1;
+disabledAI = 0;
 
 // Include revive script resources
 #include "revive_sqf\dialogs\config.cpp"

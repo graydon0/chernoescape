@@ -66,6 +66,46 @@ drn_searchAreaMarkerName = "drn_searchAreaMarker";
 // Choose a start position
 if (_useRandomStartPos) then {
     drn_startPos = [] call drn_fnc_Escape_FindGoodPos;
+	if (!isNil "p1") then {
+		if (isPlayer  p1) then {
+			p1 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p2") then {
+		if (!isPlayer p2) then {
+			p2 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p3") then {
+		if (!isPlayer p3) then {
+			p3 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p4") then {
+		if (!isPlayer p4) then {
+			p4 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p5") then {
+		if (!isPlayer p5) then {
+			p5 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p6") then {
+		if (!isPlayer p6) then {
+			p6 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p7") then {
+		if (!isPlayer p7) then {
+			p7 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
+	if (!isNil "p8") then {
+		if (!isPlayer p8) then {
+			p8 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
+	};
 }
 else {
     drn_startPos = getPos ((call drn_fnc_Escape_GetPlayers) select 0);
