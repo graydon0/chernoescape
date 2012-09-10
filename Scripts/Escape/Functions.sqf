@@ -40,7 +40,7 @@ drn_fnc_Escape_GetPlayers = {
 			drn_players set [count drn_players, p8];
 		};
 	};
-
+	["getplayers called! Players in array are:" + str drn_players] call drn_fnc_CL_ShowDebugTextAllClients;
 	drn_players
 };
 

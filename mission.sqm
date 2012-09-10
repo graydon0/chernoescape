@@ -55,7 +55,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			side="LOGIC";
@@ -258,7 +258,7 @@ class Mission
 					id=10;
 					side="EAST";
 					vehicle="RU_Soldier";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="p3";
@@ -328,6 +328,26 @@ class Mission
 					skill=0.60000002;
 					text="p8";
 					init="this setCaptive true;this setVariable [""drn_var_initializing"", true];this addeventhandler [""killed"",{ if ((_this select 1) in (call drn_fnc_Escape_GetPlayers) && (_this select 1) != (_this select 0)) then {[(_this select 1), -9] call drn_fnc_CL_AddScore;}; }];";
+				};
+			};
+		};
+		class Item9
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4808.231,339,9794.1797};
+					id=26;
+					side="WEST";
+					vehicle="USMC_Soldier_Officer";
+					player="PLAY CDG";
+					leader=1;
+					rank="COLONEL";
+					skill=0.60000002;
+					text="p9";
 				};
 			};
 		};

@@ -305,7 +305,9 @@ if (!isNull player) then {
             };
             
             if (isMultiplayer) then {
-                player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+				if (!isPlayer p9) then {
+					player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+				};
             }
             else {
                 {
@@ -373,8 +375,10 @@ if (!isNull player) then {
         };
 
         // Set position again (a fix for the bug that makes players run away after server restart and before fence is built by server)
-        player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
-        sleep 0.1;
+        if (!isPlayer p9) then {
+					player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+				};
+		sleep 0.1;
         
         player setVariable ["drn_var_initializing", false, true];
         waitUntil {!(isNil "drn_escapeHasStarted")};
