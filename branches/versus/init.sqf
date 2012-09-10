@@ -77,8 +77,9 @@ call compile preprocessFileLineNumbers "Scripts\DRN\CommonLib\CommonLib.sqf";
 call drn_fnc_CL_InitParams;
 
 call compile preprocessFileLineNumbers "Scripts\Escape\Functions.sqf";
-
+["init began functions compiled"] call drn_fnc_CL_ShowDebugTextAllClients;
 [_isJipPlayer] call compile preprocessFileLineNumbers "Briefing.sqf";
+
 call compile preprocessFileLineNumbers "scripts\Init_UPSMON.sqf";
 
 _dynamicWeather = (paramsArray select 3);
@@ -148,7 +149,8 @@ if (isNil "drn_var_Escape_syncronizationDone") then {
             player sideChat "This should never happen!";
         };
     };
-    
+    	
+		
     _playersEnteredWorld = 1;
     while {(count call drn_fnc_Escape_GetPlayers != _playersEnteredWorld)} do {
         
@@ -193,12 +195,26 @@ waitUntil {!isNil "drn_var_Escape_FunctionsInitializedOnServer"};
 [] call drn_fnc_Escape_AskForTimeSynchronization;
 
 // Player Initialization
+if (!isNil "p9") then {
+	if (!isPlayer p9) then {
+		["P9 exists, remove all.sqf"] call drn_fnc_CL_ShowDebugTextAllClients;
+		removeAllWeapons player;
+		removeAllItems player;
+		player addWeapon "ItemRadio";
+		player addWeapon "ItemWatch";
+		player addWeapon "ItemMap";
+	};
+}
+else {
+	["Else remove all.sqf"] call drn_fnc_CL_ShowDebugTextAllClients;
+	RemoveAllWeapons player;
+	removeAllItems player;
+	player addWeapon "ItemRadio";
+	player addWeapon "ItemWatch";
+	player addWeapon "ItemMap";
+};
 
-removeAllWeapons player;
-removeAllItems player;
-player addWeapon "ItemRadio";
-player addWeapon "ItemWatch";
-player addWeapon "ItemMap";
+
 
 drn_fnc_Escape_DisableLeaderSetWaypoints = {
     if (!visibleMap) exitwith {};
@@ -305,10 +321,15 @@ if (!isNull player) then {
             };
             
             if (isMultiplayer) then {
-				if (!isPlayer p9) then {
+				if (!isNil "p9") then {	
+					if (!isPlayer p9) then {
+						player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+					};
+				}
+				else {
 					player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
 				};
-            }
+				}
             else {
                 {
                     _x setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
@@ -349,8 +370,17 @@ if (!isNull player) then {
             _marker setMarkerType "Warning";
             player addWeapon "ItemCompass";
         }
+		//["about to check for map removal"] call drn_fnc_CL_ShowDebugTextAllClients;
         else {
-            player removeWeapon "ItemMap";
+			if (!isNil "p9") then {
+				if (!isPlayer p9) then {
+				player removeWeapon "ItemMap";
+				};
+			}
+			else {
+				player removeWeapon "ItemMap";
+				["p9 is nill, map removed"] call drn_fnc_CL_ShowDebugTextAllClients;
+			};
         };
         
         enableRadio true;
@@ -375,9 +405,14 @@ if (!isNull player) then {
         };
 
         // Set position again (a fix for the bug that makes players run away after server restart and before fence is built by server)
-        if (!isPlayer p9) then {
+		if (!isNil "p9") then {
+			if (!isPlayer p9) then {
 					player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
 				};
+		}
+		else {
+			player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+		};
 		sleep 0.1;
         
         player setVariable ["drn_var_initializing", false, true];
