@@ -40,7 +40,7 @@ class Mission
 	randomSeed=1261270;
 	class Intel
 	{
-		briefingName="Escape Chernarus Russian Edition";
+		briefingName="Escape Chernarus Versus Edition";
 		briefingDescription="Modified by Ham Doctor Zero. Original (99.99% of the work) by Engima of Osgota Ops.";
 		resistanceEast=1;
 		startWeather=0.2605564;
