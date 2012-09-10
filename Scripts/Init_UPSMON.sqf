@@ -25,7 +25,7 @@
 
 
 if (!isServer) exitWith {};
-
+["Beginning initUPS.sqf"] call drn_fnc_CL_ShowDebugTextAllClients;
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 //        These Variables should be checked and set as required, to make the mission runs properly.
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -235,7 +235,7 @@ KRON_UPS_ARTILLERY_GUER_FIRE = false; //set to true for doing resistance to fire
 		KRON_deleteDead = {private["_u","_s"];_u=_this select 0; _s= _this select 1; _u removeAllEventHandlers "killed"; sleep _s; deletevehicle _u};
 
 		
-		
+	
 		
 		
 	// ***********************************************************************************************************	
@@ -263,7 +263,7 @@ KRON_UPS_ARTILLERY_GUER_FIRE = false; //set to true for doing resistance to fire
 			_EastSur = KRON_UPS_EAST_SURRENDED;
 			_ResSur = KRON_UPS_GUER_SURRENDED;	
 			
-			
+			["Checking ups unit.....sqf"] call drn_fnc_CL_ShowDebugTextAllClients;	
 			//Main loop
 			while {true} do 
 			{			
@@ -573,4 +573,5 @@ processInitCommands;
 
 diag_log "--------------------------------";
 diag_log (format["UPSMON started"]);
+;
 if(true) exitWith {}; 
