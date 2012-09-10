@@ -93,15 +93,15 @@ _mobile_man 					= objNull;  				//array no.53 - place name of unit here or if n
 _mobile_man2					= objNull;			//array no.71 - NOT IMPLEMENTED
 // ==================================================================
 // UNITS THAT CAN REVIVE/UNITS THAT CAN BE REVIVED
-_can_revive 					= "soldierWB";		//array no.18 
+_can_revive 					= "RU_Soldier_Base";		//array no.18 
 _can_revive_2 					= "";				//array no.19
 _can_revive_3					= "";				//array no.72 - NOT IMPLEMENTED
 _can_revive_4					= "";				//array no.73 - NOT IMPLEMENTED
-_can_be_revived 					= "soldierWB";		//array no.20  
+_can_be_revived 					= "RU_Soldier_Base";		//array no.20  
 _can_be_revived_2 				= "";				//array no.21 
 _can_be_revived_3					= "";				//array no.74 - NOT IMPLEMENTED 
 _can_be_revived_4 				= "";				//array no.75 - NOT IMPLEMENTED
-_medic_1						= "USMC_Soldier_Medic";	//array no.76 - Used in conjunction with medpacks and bleeding	
+_medic_1						= "RU_Soldier_Medic";	//array no.76 - Used in conjunction with medpacks and bleeding	
 _medic_2						= "";				//array no.77 - Used in conjunction with medpacks and bleeding
 _medic_3						= "";				//array no.78 - NOT IMPLEMENTED	
 _medic_4						= "";				//array no.79 - NOT IMPLEMENTED	
