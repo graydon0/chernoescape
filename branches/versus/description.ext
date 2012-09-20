@@ -3,7 +3,7 @@ class Header
 {
   gameType = Team;
   minPlayers = 1;
-  maxPlayers = 8;
+  maxPlayers = 96Rnd_57mm;
 };
 
 onLoadMission = "Escape Chernarus Russian Edition";
@@ -77,7 +77,7 @@ class Params
 		title="Grass";
 		values[]={50,25,12,6,2};
 		texts[]={"No Grass", "Proximity", "Normal", "Far", "Very Far"};
-		default = 12;
+		default = 25;
 	};
 	class EnemySpawnDistance
 	{
@@ -85,6 +85,6 @@ class Params
 		title="Enemy Spawn Distance";
 		values[]={800,1050,1300};
 		texts[]={"Short (better performance)", "Medium", "Far (for good rigs)"};
-		default = 1300;
+		default = 1050;
 	};
 };

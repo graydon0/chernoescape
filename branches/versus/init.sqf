@@ -196,7 +196,7 @@ waitUntil {!isNil "drn_var_Escape_FunctionsInitializedOnServer"};
 
 // Player Initialization
 if (!isNil "p9") then {
-	if (!isPlayer p9) then {
+	if (player != p9) then {
 		["P9 exists, remove all.sqf"] call drn_fnc_CL_ShowDebugTextAllClients;
 		removeAllWeapons player;
 		removeAllItems player;
@@ -306,6 +306,13 @@ if (!isNull player) then {
                     _marker = createMarkerLocal ["drn_Escape_AmmoDepotJipMarker" + str _i, (drn_var_Escape_ammoDepotPositions select _i)];
                     _marker setMarkerType "Depot";
                 };
+				
+				for "_i" from 0 to (count drn_var_Escape_ammoDepotPositions) - 1 do {
+                    _marker = createMarkerLocal ["drn_Escape_AmmoDepotJipMarker" + str _i, (drn_var_Escape_ammoDepotPositions select _i)];
+                    _marker setMarkerType "Depot";
+                };
+				
+				
                 
                 // Extraction marker
                 if (!isNil "drn_var_Escape_ExtractionMarkerPos") then {
@@ -322,7 +329,7 @@ if (!isNull player) then {
             
             if (isMultiplayer) then {
 				if (!isNil "p9") then {	
-					if (!isPlayer p9) then {
+					if (player != p9) then {
 						player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
 					};
 				}
@@ -370,10 +377,12 @@ if (!isNull player) then {
             _marker setMarkerType "Warning";
             player addWeapon "ItemCompass";
         }
+	
+		
 		//["about to check for map removal"] call drn_fnc_CL_ShowDebugTextAllClients;
         else {
 			if (!isNil "p9") then {
-				if (!isPlayer p9) then {
+				if (player != p9) then {
 				player removeWeapon "ItemMap";
 				};
 			}
@@ -382,7 +391,18 @@ if (!isNull player) then {
 				["p9 is nill, map removed"] call drn_fnc_CL_ShowDebugTextAllClients;
 			};
         };
-        
+        if (!isNil "p9") then {
+			if (player == p9) then {
+				_marker = createMarkerLocal ["drn_startPosMarker", drn_startPos];
+				_marker setMarkerType "Warning";
+				[] spawn {
+					while {alive p1} do {
+						while {not isnull p1} do { "mkr_convoy1pos" setmarkerpos getpos convoy1; sleep 0.5; };
+						};
+					}; 
+			
+			};
+		};
         enableRadio true;
         
         if (!_isJipPlayer) then {
@@ -399,14 +419,14 @@ if (!isNull player) then {
                 // Only show this on non ported missions
                 if (worldName == "Chernarus") then {
                     sleep 20;
-                    ["^-^ Thanks for playing. Please play on Veteran or harder (Same enemy difficulty, but you can't see yourself on map.", true] call drn_fnc_CL_ShowTitleTextLocal;
+                    ["^-^ Thanks for playing.", true] call drn_fnc_CL_ShowTitleTextLocal;
                 };
             };
         };
 
         // Set position again (a fix for the bug that makes players run away after server restart and before fence is built by server)
 		if (!isNil "p9") then {
-			if (!isPlayer p9) then {
+			if (Player != p9) then {
 					player setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
 				};
 		}
