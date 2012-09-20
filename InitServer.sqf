@@ -67,43 +67,75 @@ drn_searchAreaMarkerName = "drn_searchAreaMarker";
 if (_useRandomStartPos) then {
     drn_startPos = [] call drn_fnc_Escape_FindGoodPos;
 	if (!isNil "p1") then {
-		if (isPlayer  p1) then {
+		if (!isPlayer  p1) then {
 			p1 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p1;
+			removeAllItems p1;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p2") then {
 		if (!isPlayer p2) then {
 			p2 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p2;
+			removeAllItems p2;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p3") then {
 		if (!isPlayer p3) then {
 			p3 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p3;
+			removeAllItems p3;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p4") then {
 		if (!isPlayer p4) then {
 			p4 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p4;
+			removeAllItems p4;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p5") then {
 		if (!isPlayer p5) then {
 			p5 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p5;
+			removeAllItems p5;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p6") then {
 		if (!isPlayer p6) then {
 			p6 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p6;
+			removeAllItems p6;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p7") then {
 		if (!isPlayer p7) then {
 			p7 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p7;
+			removeAllItems p7;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 	if (!isNil "p8") then {
 		if (!isPlayer p8) then {
 			p8 setPos [(drn_startPos select 0) + (random 4) - 2, (drn_startPos select 1) + (random 6) - 3, 0];
+			removeAllWeapons p8;
+			removeAllItems p8;
+			player addWeapon "ItemRadio";
+			player addWeapon "ItemWatch";
 		};
 	};
 }
@@ -123,8 +155,10 @@ publicVariable "drn_fenceIsCreated";
 
 call compile preprocessFileLineNumbers "Scripts\DRN\VillageMarkers\InitVillageMarkers.sqf";
 [_enemyFrequency] call compile preprocessFileLineNumbers "Scripts\Escape\UnitClasses.sqf";
-_playerGroup = group ((call drn_fnc_Escape_GetPlayers) select 0);
-
+//_playerGroup = group ((call drn_fnc_Escape_GetPlayers) select 0);
+//if (isNill "_playerGroup" ) then {
+		_playerGroup = group p1;
+//};
 if (_useEscapeSurprises) then {
     [_enemyMinSkill, _enemyMaxSkill, _enemyFrequency, _debugEscapeSurprises] execVM "Scripts\Escape\EscapeSurprises.sqf";
 };
@@ -366,7 +400,10 @@ if (_useMotorizedSearchGroup) then {
     _debugRoadBlocks = _this select 11;
     
     waitUntil {[drn_startPos] call drn_fnc_Escape_AllPlayersOnStartPos};
-    _playerGroup = group ((call drn_fnc_Escape_GetPlayers) select 0);
+    //_playerGroup = group ((call drn_fnc_Escape_GetPlayers) select 0);
+	//if (count _playerGroup == 0) then {
+		_playerGroup = group p1;
+	//};
     
     if (_useVillagePatrols) then {
         switch (_enemyFrequency) do
