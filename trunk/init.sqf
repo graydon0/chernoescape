@@ -1,3 +1,5 @@
+//Initialization file.
+
 private ["_useRevive"];
 private ["_volume", "_dynamicWeather", "_isJipPlayer"];
 private ["_showIntro", "_showPlayerMapAndCompass", "_fog", "_playerIsImmortal", "_playersEnteredWorld"];
