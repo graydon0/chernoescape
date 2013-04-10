@@ -1,0 +1,1 @@
+Us flags for com centers don't delete once coms hijacked, however it does seem to place a new flag for the boat objective. boat objective works, however troops which arrive are still hostile americans (had to kill them and take boat)
